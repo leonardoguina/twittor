@@ -51,7 +51,7 @@ self.addEventListener('fetch',e=>{
             return resp;
         }else{
             return fetch(e.request).then(newResp=>{
-                return actualizaCacheDinamico(DYNAMIC_CACHE,e.request,newResp);
+                return actualizarCacheDinamico(DYNAMIC_CACHE,e.request,newResp);
             })
         }
     });
